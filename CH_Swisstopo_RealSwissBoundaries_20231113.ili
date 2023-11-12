@@ -1,0 +1,46 @@
+INTERLIS 2.3;
+
+/** !!------------------------------------------------------------------------------
+ *  !! Version    | wer | Änderung
+ *  !!------------------------------------------------------------------------------
+ *  !! 2023-11-13 | sz  | Ersterfassung
+ *  !!==============================================================================
+ */
+!!@ technicalContact=mailto:stefan.ziegler.de@gmail.com
+MODEL CH_Swisstopo_RealSwissBoundaries_20231113 (de)
+AT "http://blog.sogeo.services"
+VERSION "2023-11-13"  =
+
+  TOPIC Hoheitsgebiete =
+    OID AS INTERLIS.UUIDOID;
+
+    /** Kantone
+     */
+    CLASS Kanton =
+      /** Kantonsname
+       */
+      Name : MANDATORY TEXT*512;
+      /** Kantonsnummer (aka BfS-Nummer)
+       */
+      Nummer : MANDATORY 0 .. 100;
+    END Kanton;
+
+    /** Gemeinde
+     */
+    CLASS Gemeinde =
+      /** Gemeindename
+       */
+      Name : MANDATORY TEXT*512;
+      /** Gemeindenummer (aka BfS-Nummer)
+       */
+      Nummer : MANDATORY 0 .. 19999;
+    END Gemeinde;
+
+    ASSOCIATION Kanton__Gemeinde =
+      Kanton_R -- {1} Kanton;
+      Gemeinde_R -- {1..*} Gemeinde;
+    END Kanton__Gemeinde;
+
+  END Hoheitsgebiete;
+
+END CH_Swisstopo_RealSwissBoundaries_20231113.

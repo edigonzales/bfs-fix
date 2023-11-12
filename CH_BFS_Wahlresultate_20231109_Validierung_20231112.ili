@@ -1,0 +1,38 @@
+INTERLIS 2.3;
+
+!!@ technicalContact = "mailto:stefan.ziegler.de@gmail.com";
+CONTRACTED MODEL CH_BFS_Wahlresultate_20231109_Validierung_20231112 (de)
+AT "http://blog.sogeo.services"
+VERSION "2023-11-12"  =
+  IMPORTS CH_BFS_Wahlresultate_20231109, CH_Swisstopo_RealSwissBoundaries_20231113, Math;
+  
+  VIEW TOPIC Resultate_Validierung = 
+  DEPENDS ON CH_BFS_Wahlresultate_20231109.Resultate, CH_Swisstopo_RealSwissBoundaries_20231113.Hoheitsgebiete;
+  
+    VIEW v_Gemeinde
+      PROJECTION OF G ~ CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde;
+      !!WHERE G->Nummer < 9999;
+    =
+      ALL OF G;
+
+      !! !!@ name = validCommuneNumber
+      !! !!@ ilivalid.msg = "Gemeindenummer muss < 9999 sein: {Nummer}"      
+      !!MANDATORY CONSTRAINT Nummer < 9999;
+
+      !!@ name = validCommuneNumber
+      !!@ ilivalid.msg = "Gemeindenummer nicht im Referenzdatensatz gefunden: {Nummer}"
+      EXISTENCE CONSTRAINT Nummer REQUIRED IN CH_Swisstopo_RealSwissBoundaries_20231113.Hoheitsgebiete.Gemeinde:Nummer;
+
+      !!@ name = correctTotalVotes
+      !!@ ilivalid.msg = "Eingelegte Wahlzettel ungleich Summe leere, ungültige und in Betracht gezogene Wahlzettel."
+      MANDATORY CONSTRAINT Math.add(Math.add(leere_Wahlzettel, ungueltige_Wahlzettel), in_Betracht_Wahlzettel) == eingelegte_Wahlzettel;
+
+      !!@ name = correctVotersMenWomen
+      !!@ ilivalid.msg = "Anzahl Stimmberechtigte ungleich Summe Maenner und Frauen."
+      MANDATORY CONSTRAINT Math.add(Maenner, Frauen) == wahlberechtigt;
+
+    END v_Gemeinde;
+    
+  END Resultate_Validierung;
+
+END CH_BFS_Wahlresultate_20231109_Validierung_20231112.

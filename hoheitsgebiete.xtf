@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSFER xmlns="http://www.interlis.ch/INTERLIS2.3">
+  <HEADERSECTION SENDER="ili2gpkg-5.0.1-447c03f22b8f346a44ada86c553d10110872fd40" VERSION="2.3">
+    <MODELS>
+      <MODEL NAME="CH_Swisstopo_RealSwissBoundaries_20231113" VERSION="2023-11-13" URI="http://blog.sogeo.services"/>
+    </MODELS>
+  </HEADERSECTION>
+  <DATASECTION>
+    <CH_Swisstopo_RealSwissBoundaries_20231113.Hoheitsgebiete BID="CH_Swisstopo_RealSwissBoundaries_20231113.Hoheitsgebiete">
+      <CH_Swisstopo_RealSwissBoundaries_20231113.Hoheitsgebiete.Kanton TID="F0F36ED5-F148-44F5-9273-C05E8F3BC5DA">
+        <Name>Appenzell Innerrhoden</Name>
+        <Nummer>16</Nummer>
+      </CH_Swisstopo_RealSwissBoundaries_20231113.Hoheitsgebiete.Kanton>
+      <CH_Swisstopo_RealSwissBoundaries_20231113.Hoheitsgebiete.Gemeinde TID="102AECF1-D87C-4BAD-B26E-0F511B3EB584">
+        <Name>Appenzell</Name>
+        <Nummer>3101</Nummer>
+        <Kanton_R REF="F0F36ED5-F148-44F5-9273-C05E8F3BC5DA"/>
+      </CH_Swisstopo_RealSwissBoundaries_20231113.Hoheitsgebiete.Gemeinde>
+      <CH_Swisstopo_RealSwissBoundaries_20231113.Hoheitsgebiete.Gemeinde TID="5C666FBB-E03F-47CC-8EF1-2F80ECDE26BD">
+        <Name>Schwende-Rüte</Name>
+        <Nummer>3112</Nummer>
+        <Kanton_R REF="F0F36ED5-F148-44F5-9273-C05E8F3BC5DA"/>
+      </CH_Swisstopo_RealSwissBoundaries_20231113.Hoheitsgebiete.Gemeinde>
+      <CH_Swisstopo_RealSwissBoundaries_20231113.Hoheitsgebiete.Gemeinde TID="F1467A5C-8710-479E-8D68-CD564B7117FC">
+        <Name>Schlatt-Haslen</Name>
+        <Nummer>3104</Nummer>
+        <Kanton_R REF="F0F36ED5-F148-44F5-9273-C05E8F3BC5DA"/>
+      </CH_Swisstopo_RealSwissBoundaries_20231113.Hoheitsgebiete.Gemeinde>
+      <CH_Swisstopo_RealSwissBoundaries_20231113.Hoheitsgebiete.Gemeinde TID="18B4A720-59FE-4D5C-BC68-6A5EECEC5500">
+        <Name>Gonten</Name>
+        <Nummer>3102</Nummer>
+        <Kanton_R REF="F0F36ED5-F148-44F5-9273-C05E8F3BC5DA"/>
+      </CH_Swisstopo_RealSwissBoundaries_20231113.Hoheitsgebiete.Gemeinde>
+      <CH_Swisstopo_RealSwissBoundaries_20231113.Hoheitsgebiete.Gemeinde TID="E9C732AD-06EC-40B2-8C87-929D6A41EB8D">
+        <Name>Oberegg</Name>
+        <Nummer>3111</Nummer>
+        <Kanton_R REF="F0F36ED5-F148-44F5-9273-C05E8F3BC5DA"/>
+      </CH_Swisstopo_RealSwissBoundaries_20231113.Hoheitsgebiete.Gemeinde>
+      <CH_Swisstopo_RealSwissBoundaries_20231113.Hoheitsgebiete.Gemeinde TID="95169094-3F1A-41DF-876B-F70D7C61528A">
+        <Name>Auslandschweizer</Name>
+        <Nummer>19160</Nummer>
+        <Kanton_R REF="F0F36ED5-F148-44F5-9273-C05E8F3BC5DA"/>
+      </CH_Swisstopo_RealSwissBoundaries_20231113.Hoheitsgebiete.Gemeinde>
+    </CH_Swisstopo_RealSwissBoundaries_20231113.Hoheitsgebiete>
+  </DATASECTION>
+</TRANSFER>

@@ -1,0 +1,89 @@
+INTERLIS 2.3;
+
+/** !!------------------------------------------------------------------------------
+ *  !! Version    | wer | Änderung
+ *  !!------------------------------------------------------------------------------
+ *  !! 2023-11-09 | sz  | Ersterfassung
+ *  !!==============================================================================
+ */
+!!@ technicalContact=mailto:stefan.ziegler.de@gmail.com
+!!@ furtherInformation=CH_BFS_Wahlresultate_20231109.uml
+!!@ Name=Value
+MODEL CH_BFS_Wahlresultate_20231109 (de)
+AT "http://blog.sogeo.services"
+VERSION "2023-11-09"  =
+
+  TOPIC Resultate =
+    OID AS INTERLIS.UUIDOID;
+
+    /** Gemeinderesultate
+     */
+    CLASS Gemeinde =
+      /** Gemeindename
+       */
+      Name : MANDATORY TEXT*512;
+      /** Gemeindenummer (aka BfS-Nummer)
+       */
+      Nummer : MANDATORY 0 .. 19999;
+      /** Wahlberechtige Personen
+       */
+      wahlberechtigt : MANDATORY 0 .. 2000000;
+      /** Wahlberechtige Männer
+       */
+      Maenner : MANDATORY 0 .. 2000000;
+      /** Wahlberechtigte Frauen
+       */
+      Frauen : MANDATORY 0 .. 2000000;
+      /** Eingelegte Wahlzettel
+       */
+      eingelegte_Wahlzettel : MANDATORY 0 .. 2000000;
+      /** Leere Wahlzettel
+       */
+      leere_Wahlzettel : MANDATORY 0 .. 2000000;
+      /** Ungültige Wahlzettel
+       */
+      ungueltige_Wahlzettel : MANDATORY 0 .. 2000000;
+      /** In Betracht gezogene Wahlzettel
+       */
+      in_Betracht_Wahlzettel : MANDATORY 0 .. 2000000;
+    END Gemeinde;
+
+    /** Kandidat(resultat)
+     */
+    CLASS Kandidat =
+      /** Offizielle Nummer
+       */
+      Nummer : MANDATORY 0 .. 99999;
+      /** Nachname
+       */
+      Nachname : MANDATORY TEXT*512;
+      /** Vorname
+       */
+      Vorname : MANDATORY TEXT*512;
+      /** Ist Kandidat gewählt?
+       */
+      gewaehlt : MANDATORY BOOLEAN;
+      Partei : MANDATORY TEXT*512;
+    END Kandidat;
+
+    /** Stimmen pro Kandidat pro Gemeinde
+     */
+    CLASS Kandidatenstimmen =
+      /** Erhaltene Stimmen
+       */
+      Stimmen : MANDATORY 0 .. 2000000;
+    END Kandidatenstimmen;
+
+    ASSOCIATION Gemeinde__Kandidatenstimmen =
+      Gemeinde_R -- {1} Gemeinde;
+      Kandidatenstimmen_R -- {0..*} Kandidatenstimmen;
+    END Gemeinde__Kandidatenstimmen;
+
+    ASSOCIATION Kandidat__Kandidatenstimmen =
+      Kandidat_R -- {1} Kandidat;
+      Kandidatenstimmen_R -- {0..*} Kandidatenstimmen;
+    END Kandidat__Kandidatenstimmen;
+
+  END Resultate;
+
+END CH_BFS_Wahlresultate_20231109.
