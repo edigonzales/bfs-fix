@@ -12,6 +12,7 @@ INTERLIS 2.3;
 MODEL CH_BFS_Wahlresultate_20231109 (de)
 AT "http://blog.sogeo.services"
 VERSION "2023-11-09"  =
+  IMPORTS Math;
 
   TOPIC Resultate =
     OID AS INTERLIS.UUIDOID;
@@ -83,6 +84,21 @@ VERSION "2023-11-09"  =
       Kandidat_R -- {1} Kandidat;
       Kandidatenstimmen_R -- {0..*} Kandidatenstimmen;
     END Kandidat__Kandidatenstimmen;
+
+/*
+    CONSTRAINTS OF Kandidatenstimmen = 
+      !!@ name = sumOfAllCandidatesVotesEqualsTotalVotes
+      !!@ ilivalid.msg = "Was mit den Stimmen......"
+      MANDATORY CONSTRAINT Gemeinde_R->in_Betracht_Wahlzettel > 1000000;
+    END;
+*/
+
+    CONSTRAINTS OF Gemeinde = 
+      !!@ name = sumOfAllCandidatesVotesEqualsTotalVotes
+      !!@ ilivalid.msg = "Was mit den Stimmen......"
+      MANDATORY CONSTRAINT Math.sum("Kandidatenstimmen_R->Stimmen") > 1000000.0;
+    END;
+
 
   END Resultate;
 
