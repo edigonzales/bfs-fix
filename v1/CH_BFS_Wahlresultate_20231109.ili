@@ -67,17 +67,38 @@ VERSION "2023-11-09"  =
       Partei : MANDATORY TEXT*512;
     END Kandidat;
 
-    /** Stimmen eines Kandidates in einer Gemeinde
+    /** Stimmen pro Kandidat pro Gemeinde
      */
+    CLASS Kandidatenstimmen =
+      /** Erhaltene Stimmen
+       */
+      Stimmen : MANDATORY 0 .. 2000000;
+    END Kandidatenstimmen;
+
     ASSOCIATION Gemeinde__Kandidatenstimmen =
-      Gemeinde_R -- {1..*} Gemeinde;
-      Kandidat_R -- {0..*} Kandidat;
-      Stimmen : MANDATORY 0 .. 1000000;
+      Gemeinde_R -- {1} Gemeinde;
+      Kandidatenstimmen_R -- {0..*} Kandidatenstimmen;
     END Gemeinde__Kandidatenstimmen;
 
-    CONSTRAINTS OF Gemeinde =
-      MANDATORY CONSTRAINT Math.sum("\Kandidat_R->Stimmen") == in_Betracht_Wahlzettel;
+    ASSOCIATION Kandidat__Kandidatenstimmen =
+      Kandidat_R -- {1} Kandidat;
+      Kandidatenstimmen_R -- {0..*} Kandidatenstimmen;
+    END Kandidat__Kandidatenstimmen;
+
+/*
+    CONSTRAINTS OF Kandidatenstimmen = 
+      !!@ name = sumOfAllCandidatesVotesEqualsTotalVotes
+      !!@ ilivalid.msg = "Was mit den Stimmen......"
+      MANDATORY CONSTRAINT Gemeinde_R->in_Betracht_Wahlzettel > 1000000;
     END;
+*/
+
+    CONSTRAINTS OF Gemeinde = 
+      !!@ name = sumOfAllCandidatesVotesEqualsTotalVotes
+      !!@ ilivalid.msg = "Was mit den Stimmen......"
+      MANDATORY CONSTRAINT Math.sum("Kandidatenstimmen_R->Stimmen") > 1000000.0;
+    END;
+
 
   END Resultate;
 
