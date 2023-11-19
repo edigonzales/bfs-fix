@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSFER xmlns="http://www.interlis.ch/INTERLIS2.3">
+  <HEADERSECTION SENDER="ili2gpkg-5.0.1-447c03f22b8f346a44ada86c553d10110872fd40" VERSION="2.3">
+    <MODELS>
+      <MODEL NAME="CH_BFS_Wahlresultate_20231109" VERSION="2023-11-09" URI="http://blog.sogeo.services"/>
+    </MODELS>
+  </HEADERSECTION>
+  <DATASECTION>
+    <CH_BFS_Wahlresultate_20231109.Resultate BID="CH_BFS_Wahlresultate_20231109.Resultate">
+      <CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde TID="611FD14F-53AA-46DB-B9B9-D5DB20530E17">
+        <Name>Appenzell</Name>
+        <Nummer>3101</Nummer>
+        <wahlberechtigt>3970</wahlberechtigt>
+        <Maenner>1983</Maenner>
+        <Frauen>1987</Frauen>
+        <eingelegte_Wahlzettel>1069</eingelegte_Wahlzettel>
+        <leere_Wahlzettel>55</leere_Wahlzettel>
+        <ungueltige_Wahlzettel>19</ungueltige_Wahlzettel>
+        <in_Betracht_Wahlzettel>995</in_Betracht_Wahlzettel>
+      </CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde>
+      <CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde TID="39E855D5-A5D2-4B9B-87BD-76A31D3DF642">
+        <Name>Schwende-Rüte</Name>
+        <Nummer>3112</Nummer>
+        <wahlberechtigt>4397</wahlberechtigt>
+        <Maenner>2249</Maenner>
+        <Frauen>2148</Frauen>
+        <eingelegte_Wahlzettel>1082</eingelegte_Wahlzettel>
+        <leere_Wahlzettel>53</leere_Wahlzettel>
+        <ungueltige_Wahlzettel>13</ungueltige_Wahlzettel>
+        <in_Betracht_Wahlzettel>1016</in_Betracht_Wahlzettel>
+      </CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde>
+      <CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde TID="F172E21C-932F-4901-92A5-44DE52999F5F">
+        <Name>Schlatt-Haslen</Name>
+        <Nummer>3104</Nummer>
+        <wahlberechtigt>814</wahlberechtigt>
+        <Maenner>438</Maenner>
+        <Frauen>376</Frauen>
+        <eingelegte_Wahlzettel>178</eingelegte_Wahlzettel>
+        <leere_Wahlzettel>4</leere_Wahlzettel>
+        <ungueltige_Wahlzettel>1</ungueltige_Wahlzettel>
+        <in_Betracht_Wahlzettel>173</in_Betracht_Wahlzettel>
+      </CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde>
+      <CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde TID="3279F7E2-8B69-413F-A2F5-CA0263E97875">
+        <Name>Gonten</Name>
+        <Nummer>3102</Nummer>
+        <wahlberechtigt>1056</wahlberechtigt>
+        <Maenner>532</Maenner>
+        <Frauen>524</Frauen>
+        <eingelegte_Wahlzettel>284</eingelegte_Wahlzettel>
+        <leere_Wahlzettel>14</leere_Wahlzettel>
+        <ungueltige_Wahlzettel>3</ungueltige_Wahlzettel>
+        <in_Betracht_Wahlzettel>267</in_Betracht_Wahlzettel>
+      </CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde>
+      <CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde TID="166679A7-F4F0-43D3-92B0-AF79C3ACD1E2">
+        <Name>Oberegg</Name>
+        <Nummer>3111</Nummer>
+        <wahlberechtigt>1458</wahlberechtigt>
+        <Maenner>733</Maenner>
+        <Frauen>725</Frauen>
+        <eingelegte_Wahlzettel>355</eingelegte_Wahlzettel>
+        <leere_Wahlzettel>14</leere_Wahlzettel>
+        <ungueltige_Wahlzettel>23</ungueltige_Wahlzettel>
+        <in_Betracht_Wahlzettel>318</in_Betracht_Wahlzettel>
+      </CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde>
+      <CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde TID="4D321544-5526-4D00-80B7-EC5C516CD70B">
+        <Name>Auslandschweizer</Name>
+        <Nummer>19160</Nummer>
+        <wahlberechtigt>548</wahlberechtigt>
+        <Maenner>277</Maenner>
+        <Frauen>271</Frauen>
+        <eingelegte_Wahlzettel>32</eingelegte_Wahlzettel>
+        <leere_Wahlzettel>2</leere_Wahlzettel>
+        <ungueltige_Wahlzettel>3</ungueltige_Wahlzettel>
+        <in_Betracht_Wahlzettel>27</in_Betracht_Wahlzettel>
+      </CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde>
+      <CH_BFS_Wahlresultate_20231109.Resultate.Kandidat TID="BF76A3E8-4645-4298-A0F1-4F6D3CDC8549">
+        <Nummer>1</Nummer>
+        <Nachname>Rechsteiner</Nachname>
+        <Vorname>Thomas</Vorname>
+        <gewaehlt>true</gewaehlt>
+        <Partei>Die Mitte</Partei>
+      </CH_BFS_Wahlresultate_20231109.Resultate.Kandidat>
+      <CH_BFS_Wahlresultate_20231109.Resultate.Kandidat TID="B27DFFC7-13BB-4827-BA1A-6E5A9322C13A">
+        <Nummer>2</Nummer>
+        <Nachname>Eberle</Nachname>
+        <Vorname>Ruedi</Vorname>
+        <gewaehlt>false</gewaehlt>
+        <Partei>SVP</Partei>
+      </CH_BFS_Wahlresultate_20231109.Resultate.Kandidat>
+      <CH_BFS_Wahlresultate_20231109.Resultate.Kandidat TID="4C053CB9-D006-4D58-A996-E248EF238101">
+        <Nummer>99</Nummer>
+        <Nachname>Vereinzelte</Nachname>
+        <Vorname>Vereinzelte</Vorname>
+        <gewaehlt>false</gewaehlt>
+        <Partei>unbekannt</Partei>
+      </CH_BFS_Wahlresultate_20231109.Resultate.Kandidat>
+      <CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde__Kandidatenstimmen>
+        <Gemeinde_R REF="611FD14F-53AA-46DB-B9B9-D5DB20530E17"/>
+        <Kandidat_R REF="BF76A3E8-4645-4298-A0F1-4F6D3CDC8549"/>
+        <Stimmen>856</Stimmen>
+      </CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde__Kandidatenstimmen>
+      <CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde__Kandidatenstimmen>
+        <Gemeinde_R REF="611FD14F-53AA-46DB-B9B9-D5DB20530E17"/>
+        <Kandidat_R REF="B27DFFC7-13BB-4827-BA1A-6E5A9322C13A"/>
+        <Stimmen>26</Stimmen>
+      </CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde__Kandidatenstimmen>
+      <CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde__Kandidatenstimmen>
+        <Gemeinde_R REF="611FD14F-53AA-46DB-B9B9-D5DB20530E17"/>
+        <Kandidat_R REF="4C053CB9-D006-4D58-A996-E248EF238101"/>
+        <Stimmen>113</Stimmen>
+      </CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde__Kandidatenstimmen>
+      <CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde__Kandidatenstimmen>
+        <Gemeinde_R REF="39E855D5-A5D2-4B9B-87BD-76A31D3DF642"/>
+        <Kandidat_R REF="BF76A3E8-4645-4298-A0F1-4F6D3CDC8549"/>
+        <Stimmen>883</Stimmen>
+      </CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde__Kandidatenstimmen>
+      <CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde__Kandidatenstimmen>
+        <Gemeinde_R REF="39E855D5-A5D2-4B9B-87BD-76A31D3DF642"/>
+        <Kandidat_R REF="B27DFFC7-13BB-4827-BA1A-6E5A9322C13A"/>
+        <Stimmen>25</Stimmen>
+      </CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde__Kandidatenstimmen>
+      <CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde__Kandidatenstimmen>
+        <Gemeinde_R REF="39E855D5-A5D2-4B9B-87BD-76A31D3DF642"/>
+        <Kandidat_R REF="4C053CB9-D006-4D58-A996-E248EF238101"/>
+        <Stimmen>108</Stimmen>
+      </CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde__Kandidatenstimmen>
+      <CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde__Kandidatenstimmen>
+        <Gemeinde_R REF="F172E21C-932F-4901-92A5-44DE52999F5F"/>
+        <Kandidat_R REF="BF76A3E8-4645-4298-A0F1-4F6D3CDC8549"/>
+        <Stimmen>152</Stimmen>
+      </CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde__Kandidatenstimmen>
+      <CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde__Kandidatenstimmen>
+        <Gemeinde_R REF="F172E21C-932F-4901-92A5-44DE52999F5F"/>
+        <Kandidat_R REF="B27DFFC7-13BB-4827-BA1A-6E5A9322C13A"/>
+        <Stimmen>4</Stimmen>
+      </CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde__Kandidatenstimmen>
+      <CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde__Kandidatenstimmen>
+        <Gemeinde_R REF="F172E21C-932F-4901-92A5-44DE52999F5F"/>
+        <Kandidat_R REF="4C053CB9-D006-4D58-A996-E248EF238101"/>
+        <Stimmen>17</Stimmen>
+      </CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde__Kandidatenstimmen>
+      <CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde__Kandidatenstimmen>
+        <Gemeinde_R REF="3279F7E2-8B69-413F-A2F5-CA0263E97875"/>
+        <Kandidat_R REF="BF76A3E8-4645-4298-A0F1-4F6D3CDC8549"/>
+        <Stimmen>245</Stimmen>
+      </CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde__Kandidatenstimmen>
+      <CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde__Kandidatenstimmen>
+        <Gemeinde_R REF="3279F7E2-8B69-413F-A2F5-CA0263E97875"/>
+        <Kandidat_R REF="B27DFFC7-13BB-4827-BA1A-6E5A9322C13A"/>
+        <Stimmen>1</Stimmen>
+      </CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde__Kandidatenstimmen>
+      <CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde__Kandidatenstimmen>
+        <Gemeinde_R REF="3279F7E2-8B69-413F-A2F5-CA0263E97875"/>
+        <Kandidat_R REF="4C053CB9-D006-4D58-A996-E248EF238101"/>
+        <Stimmen>21</Stimmen>
+      </CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde__Kandidatenstimmen>
+      <CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde__Kandidatenstimmen>
+        <Gemeinde_R REF="166679A7-F4F0-43D3-92B0-AF79C3ACD1E2"/>
+        <Kandidat_R REF="BF76A3E8-4645-4298-A0F1-4F6D3CDC8549"/>
+        <Stimmen>267</Stimmen>
+      </CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde__Kandidatenstimmen>
+      <CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde__Kandidatenstimmen>
+        <Gemeinde_R REF="166679A7-F4F0-43D3-92B0-AF79C3ACD1E2"/>
+        <Kandidat_R REF="B27DFFC7-13BB-4827-BA1A-6E5A9322C13A"/>
+        <Stimmen>11</Stimmen>
+      </CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde__Kandidatenstimmen>
+      <CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde__Kandidatenstimmen>
+        <Gemeinde_R REF="166679A7-F4F0-43D3-92B0-AF79C3ACD1E2"/>
+        <Kandidat_R REF="4C053CB9-D006-4D58-A996-E248EF238101"/>
+        <Stimmen>40</Stimmen>
+      </CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde__Kandidatenstimmen>
+      <CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde__Kandidatenstimmen>
+        <Gemeinde_R REF="4D321544-5526-4D00-80B7-EC5C516CD70B"/>
+        <Kandidat_R REF="BF76A3E8-4645-4298-A0F1-4F6D3CDC8549"/>
+        <Stimmen>20</Stimmen>
+      </CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde__Kandidatenstimmen>
+      <CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde__Kandidatenstimmen>
+        <Gemeinde_R REF="4D321544-5526-4D00-80B7-EC5C516CD70B"/>
+        <Kandidat_R REF="B27DFFC7-13BB-4827-BA1A-6E5A9322C13A"/>
+        <Stimmen>1</Stimmen>
+      </CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde__Kandidatenstimmen>
+      <CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde__Kandidatenstimmen>
+        <Gemeinde_R REF="4D321544-5526-4D00-80B7-EC5C516CD70B"/>
+        <Kandidat_R REF="4C053CB9-D006-4D58-A996-E248EF238101"/>
+        <Stimmen>6</Stimmen>
+      </CH_BFS_Wahlresultate_20231109.Resultate.Gemeinde__Kandidatenstimmen>
+    </CH_BFS_Wahlresultate_20231109.Resultate>
+  </DATASECTION>
+</TRANSFER>

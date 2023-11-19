@@ -79,8 +79,6 @@ VERSION "2023-11-09"  =
       !!@ name=eindeutigeKandidatennummer
       !!@ ilivalid.msg="Keine eindeutige Kandidatenummern: {Nummer}"
       UNIQUE Nummer;
-
-      
     END Kandidat;
 
     /** Stimmen eines Kandidates in einer Gemeinde
