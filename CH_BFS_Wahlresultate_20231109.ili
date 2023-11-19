@@ -12,6 +12,7 @@ INTERLIS 2.3;
 MODEL CH_BFS_Wahlresultate_20231109 (de)
 AT "http://blog.sogeo.services"
 VERSION "2023-11-09"  =
+  IMPORTS Math;
 
   TOPIC Resultate =
     OID AS INTERLIS.UUIDOID;
@@ -46,6 +47,15 @@ VERSION "2023-11-09"  =
       /** In Betracht gezogene Wahlzettel
        */
       in_Betracht_Wahlzettel : MANDATORY 0 .. 2000000;
+      !!@ name=eindeutigeGemeindenummer
+      !!@ ilivalid.msg="Keine eindeutige Gemeindenummern: {Nummer}"
+      UNIQUE Nummer;
+      !!@ name=korrekteAnzahlStimmen
+      !!@ ilivalid.msg="Eingelegte Wahlzettel ungleich Summe leere, ungültige und in Betracht gezogene Wahlzettel."
+      MANDATORY CONSTRAINT Math.add(Math.add(leere_Wahlzettel, ungueltige_Wahlzettel), in_Betracht_Wahlzettel) == eingelegte_Wahlzettel;
+      !!@ name=korrekteSummeMaennerFrauen
+      !!@ ilivalid.msg="Anzahl Stimmberechtigte ungleich Summe Maenner und Frauen."
+      MANDATORY CONSTRAINT Math.add(Maenner, Frauen) == wahlberechtigt;
     END Gemeinde;
 
     /** Kandidat(resultat)
@@ -66,6 +76,11 @@ VERSION "2023-11-09"  =
       /** Partei
        */
       Partei : MANDATORY TEXT*512;
+      !!@ name=eindeutigeKandidatennummer
+      !!@ ilivalid.msg="Keine eindeutige Kandidatenummern: {Nummer}"
+      UNIQUE Nummer;
+
+      
     END Kandidat;
 
     /** Stimmen eines Kandidates in einer Gemeinde
